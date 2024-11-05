@@ -181,7 +181,6 @@
 </head>
 <body>
 
-<!-- Navigation Bar -->
 <nav>
     <a href="#hero">Home</a>
     <a href="#about">About</a>
@@ -189,7 +188,6 @@
     <!-- <a href="#contact">Contact</a> -->
 </nav>
 
-<!-- Hero Section -->
 <section class="hero" id="hero">
     <img src="hacker.svg" alt="Guy in a hat" width="125" height="125">
     <h1 id="typewriter"> <span class="cursor"></span></h1>
@@ -198,7 +196,6 @@
     
 </section>
 
-<!-- About Section -->
 <section class="about" id="about">
     <h2>About Me</h2>
     <p>Secret. Lol. Nah, actually I'm just feeling lazy right now. I'ma come back to this later, or never. Yeah I know I'm quite a slob sometimes.. Anyways, you might as well want to look at my projects right below.. Thank you :).</p>
@@ -226,7 +223,7 @@
     
 </section>
 
-<!-- Portfolio Section -->
+
 <section class="portfolio" id="portfolio">
 
     <h2>My Projects</h2>
@@ -298,10 +295,10 @@
         if (!isDeletingWelBot) {
             if (indexWelBot < textWelBot.length) {
                 indexWelBot++;
-                setTimeout(typeWriterWelBot, 50); // Typing speed
+                setTimeout(typeWriterWelBot, 50); 
             } else {
                 isDeletingWelBot = true;
-                setTimeout(typeWriterWelBot, 2000); // Pause before deleting
+                setTimeout(typeWriterWelBot, 2000); 
             }
         }
         // } else {
@@ -315,7 +312,6 @@
         // }
     }
 
-    // Start the typing animations for both elements
     typeWriterWelBot();
     typeWriterWelcome();
 </script>
