@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #0d0d0d;
+            color:#00ff99;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: #00ff99;
+        }
+        a:hover {
+            color: #00cc7a;
+        }
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Terminal-Style Cursor */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #00ff99;
+            animation: blink 1s steps(2, start) infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: #111;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 10;
+        }
+        nav a {
+            font-weight: 500;
+            padding: 0 1rem;
+            color: #00ff99;
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d0d0d;
+            text-align: center;
+            padding: 2rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0 2rem;
+            max-width: 600px;
+        }
+        .hero .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            background-color: #00ff99;
+            color: #0d0d0d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .hero .cta-button:hover {
+            background-color: #00cc7a;
+        }
+        /* About Section */
+        .about, .portfolio, .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: #111;
+        }
+        .about h2, .portfolio h2, .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        /* Portfolio Gallery */
+        .portfolio p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .portfolio-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            filter: grayscale(100%);
+        }
+        /* Contact Form */
+        /* .contact form {
+            max-width: 600px;
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact input, .contact textarea, .contact button {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #333;
+            background-color: #222;
+            color: #00ff99;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact button {
+            background-color: #00ff99;
+            color: #0d0d0d;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact button:hover {
+            background-color: #00cc7a;
+        } */
+
+        #github-logo {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        
+        .flexer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 200px;
+        }
+        #discord-logo {
+            margin-right: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <!-- <a href="#contact">Contact</a> -->
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <img src="hacker.svg" alt="Guy in a hat" width="125" height="125">
+    <h1 id="typewriter"> <span class="cursor"></span></h1>
+    <p id="typewriter2"><span class="cursor"></span></p>
+    <a href="#portfolio" class="cta-button">View Portfolio</a>
+    
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <p>Secret. Lol. Nah, actually I'm just feeling lazy right now. I'ma come back to this later, or never. Yeah I know I'm quite a slob sometimes.. Anyways, you might as well want to look at my projects right below.. Thank you :).</p>
+    <div class="centerer">
+        <CENTER>
+
+            <div class="flexer">
+                <a href="https://discord.com/users/753288897492156498" target="_blank">
+                    <img src="discord.svg" alt="Discord Logo" width="25" height="25" id="discord-logo">
+                </a>
+                <a href="https://www.facebook.com/JefJoeV/" target="_blank">
+                    <img src="facebook.svg" alt="Discord Logo" width="25" height="25">
+                </a>
+                <a href="https://github.com/jooecoodes" target="_blank">
+                    <img src="github.png" alt="Discord Logo" width="68" height="68" id="github-logo">
+                </a>
+                <a href="https://www.instagram.com/jefelismyname/profilecard/" target="_blank">
+                    <img src="instagram.svg" alt="Discord Logo" width="25" height="25">
+                </a>
+            </div>
+        
+        </CENTER>
+    </div>
+   
+    
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+
+    <h2>My Projects</h2>
+    <p>I'm still working on this thingy, but they're all public on my Github anyways, yeah.. public, I'm not selfish.. Just click on that cat thingy in case you have no idea what in the world Github is.. :)</p>
+    <div class="portfolio-gallery">
+        <!-- Portfolio Item 1 -->
+        <!-- <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 1">
+        </div> -->
+        <!-- Portfolio Item 2 -->
+        <!-- <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 2">
+        </div> -->
+        <!-- Portfolio Item 3 -->
+        <!-- <div class="portfolio-item">
+            <img src="https://via.placeholder.com/400x300" alt="Project 3">
+        </div> -->
+    </div>
+</section>
+
+<!-- Contact Section
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form action="#">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section> -->
+<script>
+    const textElementWelcome = document.getElementById('typewriter');
+    const textElementWelBot = document.getElementById('typewriter2');
+    const textWelcome = "Welcome to My Portfolio";
+    const textWelBot = "Yeah.. this looks like a portfolio to me.. I guess";
+    let indexWelcome = 0;
+    let isDeletingWelcome = false;
+    let indexWelBot = 0;
+    let isDeletingWelBot = false;
+
+    function typeWriterWelcome() {
+        let currentText = textWelcome.slice(0, indexWelcome);
+        textElementWelcome.innerHTML = currentText + '<span class="cursor"></span>';
+
+        if (!isDeletingWelcome) {
+            if (indexWelcome < textWelcome.length) {
+                indexWelcome++;
+                setTimeout(typeWriterWelcome, 150); // Typing speed
+            } else {
+                isDeletingWelcome = true;
+                setTimeout(typeWriterWelcome, 2000); // Pause before deleting
+            }
+        }
+        // } else {
+        //     if (indexWelcome > 0) {
+        //         indexWelcome--;
+        //         setTimeout(typeWriterWelcome, 100); // Deleting speed
+        //     } else {
+        //         isDeletingWelcome = false;
+        //         setTimeout(typeWriterWelcome, 500); // Pause before typing again
+        //     }
+        // }
+    }
+
+    function typeWriterWelBot() {
+        let currentText = textWelBot.slice(0, indexWelBot);
+        textElementWelBot.innerHTML = currentText + '<span class="cursor"></span>';
+
+        if (!isDeletingWelBot) {
+            if (indexWelBot < textWelBot.length) {
+                indexWelBot++;
+                setTimeout(typeWriterWelBot, 50); // Typing speed
+            } else {
+                isDeletingWelBot = true;
+                setTimeout(typeWriterWelBot, 2000); // Pause before deleting
+            }
+        }
+        // } else {
+        //     if (indexWelBot > 0) {
+        //         indexWelBot--;
+        //         setTimeout(typeWriterWelBot, 50); // Deleting speed
+        //     } else {
+        //         isDeletingWelBot = false;
+        //         setTimeout(typeWriterWelBot, 500); // Pause before typing again
+        //     }
+        // }
+    }
+
+    // Start the typing animations for both elements
+    typeWriterWelBot();
+    typeWriterWelcome();
+</script>
+</body>
+</html>
